@@ -1,0 +1,241 @@
+   <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+session_start();
+
+// Check if the add_to_cart parameter is set in the URL
+if(isset($_GET['add_to_cart'])) {
+    // Check if the required form fields are submitted
+    if(isset($_POST['product_id'], $_POST['product_name'], $_POST['product_price'], $_POST['product_image'], $_POST['product_quantity'])) {
+        // Initialize the $_SESSION['cart'] variable if it's not set
+        if(!isset($_SESSION['cart'])) {
+            $_SESSION['cart'] = array();
+        }
+
+        // Check if the product_id is already in the cart
+        if(!array_key_exists($_POST['product_id'], $_SESSION['cart'])) {
+            // Product is not in the cart, so add it
+            $product_id = $_POST['product_id'];
+            $product_name = $_POST['product_name'];
+            $product_price = $_POST['product_price'];
+            $product_image = $_POST['product_image'];
+            $product_quantity = $_POST['product_quantity'];
+
+            // Create an array for the product
+            $product_array = array(
+                'product_id' => $product_id,
+                'product_name' => $product_name,
+                'product_price' => $product_price,
+                'product_image' => $product_image,
+                'product_quantity' => $product_quantity
+            );
+
+            // Add the product to the cart
+            $_SESSION['cart'][$product_id] = $product_array;
+        } else {
+            // Product is already in the cart
+            echo '<script>alert("Product was already added to the cart");</script>';
+            echo '<script>window.location="index.php";</script>';
+            exit; // Stop further execution
+        }
+    } else {
+        // Required form fields are not submitted
+        echo "Error: Required form fields are missing.";
+        exit; // Stop further execution
+    }
+}
+
+?>
+
+<!-- Your HTML code goes here -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <?php
+if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+    foreach($_SESSION['cart'] as $key => $value) {
+        if(!empty($value)) {
+?>
+            <tr>
+                <td>
+                    <div class="product-info">
+                        <img src="assets/imgs/<?php echo $value['product_image']; ?>"/>
+                        <div>
+                            <p><?php echo $value['product_name']; ?></p>
+                            <small><span>Rs.</span><?php echo $value['product_price']; ?></small>
+                            <br>
+                            <a class="remove-btn" href="#">Remove</a>
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                    <input type="number" value="<?php echo $value['product_quantity']; ?>"/>
+                    <a class="edit-btn" href="#">Edit</a>
+                </td>
+
+                <td>
+                    <span>Rs.</span>
+                    <span class="product-price">1000</span>
+                </td>
+            </tr>
+<?php
+        }
+    }
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--CART-->
+
+<section class="cart container my-5 py-5">
+    <div class="container mt-5">
+        <h2 class="font-weight-bolde">Your Cart</h2>
+        <hr>
+    </div>
+
+    <table class="mt-5 pt-5">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+      <!--  $key = product id , $value = array -->
+    <?php  if(isset($_SESSION['cart']) && is_array($_SESSION['cart'])) {
+    foreach($_SESSION['cart'] as $key => $value) {
+      if(!empty($value)) {
+      ?>
+
+
+
+        <tr>
+            <td>
+                <div class="product-info">
+                    <img src="assets/imgs/<?php echo $value['product_image']; ?>"/>
+                    <div>
+                    <p><?php echo $value['product_name']; ?></p>
+                    <small><span>Rs.</span><?php echo $value['product_price']; ?></small>
+
+                    <form method="post" action="cart.php">
+                         <input type="hidden" name="product_id" value="<?php echo $value['product_id']; ?>">
+                         <input type="submit" name="remove_product" class="remove-btn" value="Remove" />
+                    </form>
+                    </div>
+                </div>
+            </td>
+
+            <td>
+                <span id="quantity_display_<?php echo $value['product_id']; ?>"><?php echo $value['product_quantity']; ?></span>
+                    <form id="edit_form_<?php echo $value['product_id']; ?>" method="POST" action="cart.php" style="display: none;">
+                        <input type="hidden" name="product_id" value="<?php echo $value['product_id']; ?>"/>
+                        <input type="number" name="product_quantity" value="<?php echo $value['product_quantity']; ?>" min="1"/>
+
+                    </form>
+                <input type="submit" class="edit-btn" value="Edit" onclick="toggleEdit(<?php echo $value['product_id']; ?>)" />
+            </td>
+
+            <td>
+                <span>Rs.</span>
+                <span class="product-price"><?php echo $value['product_quantity'] * $value['product_price']; ?></span>
+            </td>
+        </tr>
+        
+        <?php } } } ?>
+
+        
+
+
+
+
+
+
+
+    </table>
+<div class="cart-total">
+    <table>
+        <tr>
+            <td>Subtotal</td>
+            <td>Rs.1000</td>
+        </tr>
+
+        <tr>
+            <td>Total</td>
+            <td>Rs.1000</td>
+        </tr>
+
+
+    </table>
+
+
+        <!-- JavaScript code to update subtotal dynamically -->
+        <script>
+        function updateSubtotal(productId) {
+            var quantityInput = document.getElementById('quantity_input_' + productId);
+            var subtotalElement = document.getElementById('subtotal_' + productId);
+            var productPrice = <?php echo json_encode($value['product_price']); ?>; // Get product price from PHP
+
+            var subtotal = quantityInput.value * productPrice;
+            subtotalElement.innerText = subtotal.toFixed(2);
+        }
+    </script>
+
+
+
+</div>
+
+<div class="checkout-container">
+    <button class="btn checkout-btn">Check Out</button>
+</div>
+
+
+
+
+
+</section>
+
+<!--End of the cart-->
+

@@ -1,0 +1,1373 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.nav-buttons{
+    margin-left: 10%;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+h5{
+    font-size: 1rem;
+    font-weight: 400;
+}
+h6{
+    color: #D8D8D8;
+}
+
+
+button{
+
+    font-size: 0.8rem;
+    font-weight: 100;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+button:hover{
+    background-color: darkgreen;
+}
+
+
+
+
+.navbar {
+    font-size: 20px;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px darkgray;
+}
+.navbar-light .navbar-nav .nav-link {
+    padding: 0 20px;
+    color: black;
+    transition: 0.4s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar i:hover,
+.navbar-light .navbar-nav .nav-link.active
+.navbar i:hover {
+    color: darkgreen;
+}
+.navbar i {
+    font-size: 1.2rem;
+    padding: 0 0.7px;
+    transition: 0.4s ease;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+}
+.fa-solid, .fas {
+    font-weight: 900;
+}
+
+
+
+
+/*Home Style*/
+
+#home{
+    background-image: url('../imgs/view-eyeshadow-palette-with-brush-applicator.jpg');
+    width: 100%;
+    height: 95vh;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+}
+#home span{
+    color: #e83e8c;
+}
+
+
+#home-service{
+    background-image: url('../imgs/beauty-portrait-sensual-ginger-woman-with-long-hair-posing-sideways-while-looking-away-holding-cosmetics-brush.jpg');
+    width: 100%;
+    height: 95vh;
+    margin-right: 50%;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+#home-service span{
+    color: var(--pink);
+}
+
+#home-service .container {
+    text-align: right; /* Align text to the right */
+    margin-left: 9%;
+    
+}
+
+
+#stylist-dashboard {
+
+    position: relative;
+    width: 100%;
+    height: 95vh;
+    margin-right: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#stylist-dashboard::before {
+    content: "";
+    background-image: url('../imgs/friends-posing-with-bathrobe-spa.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    filter: brightness(0.6); /* Adjust the brightness here */
+    z-index: -1;
+}
+
+
+#stylist-dashboard span{
+    color: pink;
+}
+
+#stylist-dashboard h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: white;
+}
+
+#stylist-dashboard h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: pink;
+}
+#stylist-dashboard .container {
+    text-align: center; /* Align text to the right */
+
+    
+}
+
+#bottomhny-gd-ingf {
+
+    margin-top: 200px;
+}
+
+#new .one img{
+   
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    background-color: white;
+    cursor: pointer;
+    transition: 2em;
+   
+}
+#new .one .img:hover {
+    background-color: black;
+    opacity: 0.9;
+ 
+}
+
+/*
+#new.one{
+    position: relative;
+}
+
+#new .one .details{
+    position:absolute;
+    top: 0;
+    left: 0;
+    color: red;
+    font-weight: bold;
+    transition: 0.4s ease;
+    opacity: 0.8;
+    background-color: blue;
+}
+*/
+
+
+#new .one {
+    position: relative;
+}
+
+#new .one .details {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: black;
+    font-weight: bold;
+    transition: 0.4s ease;
+    opacity: 0.8;
+    background: transparent;
+    border: transparent;
+    padding: 20px; 
+    text-align: center; 
+    cursor: pointer;
+    
+}
+
+#new .one .details:hover {
+    background-color: white;
+    opacity: 0.9;
+ 
+    border-radius: 40px;
+ 
+}
+#new .one .details h2 {
+    margin-bottom: 10px; 
+    
+}
+
+#new .one .details button {
+  
+    font-size: 0.8rem;
+    font-weight: 900;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 13px 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+}
+
+#new .one .details button:hover {
+    
+    color: white;
+  
+}
+
+#new .one .details .btn-1:hover {
+    background-color: darkgreen; /* Hover color for button 1 */
+}
+
+
+#new .one .details .btn-2:hover {
+    background-color: darksalmon; /* Hover color for button 2 */
+}
+
+
+#new .one .details .btn-3:hover {
+    background-color: darkorange; /* Hover color for button 3 */
+}
+
+
+#featured {
+    text-align: center;
+    margin-top: 50px;
+
+  }
+  
+  #featured .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+  }
+
+.product{
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+.product img{
+    transition: 0.3s all;
+}
+.product:hover img{
+    opacity: 0.7;
+}
+
+#banner-1{
+    background-image: url('../imgs/beautician-doing-face-beauty-routine-female-client.jpg');
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#banner-1 span{
+
+    color: #e83e8c;
+}
+
+
+#banner-2 .container {
+    text-align: right; /* Align text to the right */
+}
+#banner-2{
+    background-image: url('../imgs/top-view-collection-make-up-accessories-with-copy-space.jpg');
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: 80px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-end;
+}
+
+#banner-2 span{
+
+    color: #e83e8c;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#hair {
+    text-align: center; /* Center-align text */
+  }
+  
+  #hair .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align container contents horizontally */
+    justify-content: center; /* Center-align container contents vertically */
+  }
+
+  #skin {
+    text-align: center; /* Center-align text */
+  }
+  
+  #skin .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align container contents horizontally */
+    justify-content: center; /* Center-align container contents vertically */
+  }
+
+  #body {
+    text-align: center; /* Center-align text */
+  }
+  
+  #body .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align container contents horizontally */
+    justify-content: center; /* Center-align container contents vertically */
+  }
+
+  #nail {
+    text-align: center; /* Center-align text */
+  }
+  
+  #nail .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align container contents horizontally */
+    justify-content: center; /* Center-align container contents vertically */
+  }
+
+  footer{
+    background-color: black;
+
+  }
+  footer h5{
+    color:#D8D8D8;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  footer li{
+    padding-bottom: 4px;
+  }
+
+  footer li a{
+    font-size: 0.8rem;
+    color: gray;
+    text-decoration: none;
+  }
+  footer li a:hover{
+    color: #D8D8D8;
+  }
+  
+  footer .copyright a{
+    color: black;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    margin: 0 5px;
+  }
+
+  footer .copyright a:hover{
+    color: white;
+    background-color:darkgreen;
+  }
+  footer p {
+    color: white;
+  }
+  footer .copyright img{
+    width: 30%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   CART CSS   */
+.cart table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart .product-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+.cart th{
+    text-align:left;
+    padding: 5px  10px;
+    color: white;
+    background-color: darkgreen;
+
+}
+
+.cart td{
+    padding: 10px 20px;
+}
+
+.cart td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.cart td input{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+
+}
+
+.cart td a{
+
+    color: darkgreen;
+}
+
+.cart .remove-btn{
+    color: darkgreen;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    background-color: none;
+    width: 100%;
+    border-radius: 10%;
+    
+
+
+}
+
+.cart .edit-btn{
+    color: darkgreen;
+    text-decoration: none;
+    font-size: 15px;
+    border: none;
+    background-color: none;
+    width: auto;
+    border-radius: 10%;
+   
+}
+
+.cart .product-info p{
+    margin: 3px;
+}
+
+
+.cart-total{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cart-total table{
+    margin-top: 10px;
+    width: 100%;
+    max-width: 500px;
+    border-top: 3px solid darkgreen;
+}
+
+td:last-child{
+    text-align: right;
+}
+
+th:last-child{
+    text-align: right;
+}
+
+.checkout-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.checkout-btn{
+    display: flex;
+    justify-content: flex-end;
+    background-color: darkgreen;
+    color: white;
+}
+
+.checkout-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*LOGIN CSS*/
+
+
+#stylist-login{
+    background-image: url('../imgs/login-stylist-background.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+#login{
+    background-image: url('../imgs/sensual-female-looking-mirror-apply-makeup.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#login-customer{
+    background-image: url('../imgs/login-page-background.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#login-form {
+
+    width: 30%; 
+    margin: 0 auto; 
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid darkgreen;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+#login-form .form-group {
+    margin-bottom: 15px; /* Add margin bottom between form groups */
+}
+
+#login-form label {
+    margin-bottom: 2px; /* Add margin bottom between label and input */
+}
+
+#login-form input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 10px 0 ;
+}
+
+#login-form #login-btn{
+    background-color: lightcoral;
+    color: black;
+}
+
+#login-form #register-url{
+    color: lightcoral;
+}
+
+
+/*REGISTER FORM CSS*/
+
+#stylist-register{
+    background-image: url('../imgs/friends-using-beauty-cream-spa.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#register{
+    background-image: url('../imgs/register-page-background.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#admin-profile{
+    background-image: url('../imgs/5591317.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#profile{
+    background-image: url('../imgs/5591317.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+#register-form{
+    width: 40%;
+    margin: 0 auto; 
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid darkgreen;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+#register-form .form-group {
+    margin-bottom: 15px; /* Add margin bottom between form groups */
+}
+
+#register-form label {
+    margin-bottom: 5px; /* Add margin bottom between label and input */
+}
+
+#register-form input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+   
+}
+
+#register-form #register-btn{
+    background-color: lightcoral;
+    color: white;
+}
+
+#register-form #login-url{
+    color: lightcoral;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*   Account CSS   */
+
+#account-form{
+    width: 50%;
+    margin: 35px auto;
+    text-align: center;
+    padding: 20px;
+}
+
+#account-form input{
+    margin: 5px auto;
+}
+
+#account-form #change-pass-btn{
+    color: white;
+    background-color: darkgreen;
+}
+
+.account-info #order-btn,#logout-btn{
+    color: darkgreen;
+    text-decoration: none;
+}
+
+/*  Orders CSS  */
+
+.order table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order .product-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.order th{
+    text-align: left;
+    padding: 5px 10px;
+    color: white;
+    background-color: darkgreen;
+    text-align: left;
+}
+
+
+.order td{
+    padding: 10px 20px;
+
+}
+
+.order td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+
+/*   check out   */
+
+#checkout-form{
+    width: 60%;
+    margin: 0 auto; 
+    margin-bottom: 5px;
+   
+    padding: 20px;
+    border-top: 1px solid darkgreen;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+#checkout-form .checkout-small-element{
+
+
+    display: inline-block;
+    width: 48%;
+    margin: 10px auto;
+}
+
+
+
+#checkout-form .checkout-btn-container{
+    margin: 10px;
+    text-align: right;
+    margin-right: 40px;
+}
+
+#checkout-form #checkout-btn{
+    color: white;
+    background-color: darkgreen;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* services images css */
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.luxe-grid {
+    flex: 1 0 30%;
+    margin-bottom: 30px;
+
+}
+
+.luxe-grid-info {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    height: 100%; /* Full height of luxe-grid */
+
+
+  
+}
+
+.luxe-grid-info:hover {
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.luxe-grid-info img {
+    width: 80%;
+
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.cause-title-wrap {
+    text-decoration: none;
+    color: #333;
+}
+
+.cause-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.btn-style {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* * ADD - SERVICES FORM CSS*/ 
+
+
+  #add-service{
+      background-image: url('../imgs/friends-using-beauty-cream-spa.jpg');
+      width: 100%;
+      height: auto;
+      background-size: cover;
+      /*background-position-x: 90px;*/
+      /*background-position-y: 80px;*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+  }
+
+  #add-product{
+    background-image: url('../imgs/top-view-cosmetic-products-with-copy-space.jpg');
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    /*background-position-x: 90px;*/
+    /*background-position-y: 80px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+  
+  #add-service-form{
+      width: 40%;
+      margin: 0 auto; 
+      margin-bottom: 5px;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid darkgreen;
+      position: relative;
+      background: transparent;
+      border: 2px solid rgba(255,255,255,.5);
+      border-radius: 20px;
+      backdrop-filter: blur(20px);
+      box-shadow: 0 0 30px rgba(0,0,0,.5);
+      justify-content: center;
+      align-items: center;
+      overflow: hidden; 
+  }
+  
+  #add-service-form .form-group {
+      margin-bottom: 15px; /* Add margin bottom between form groups */
+  }
+  
+  #add-service-form label {
+      margin-bottom: 5px; /* Add margin bottom between label and input */
+  }
+  
+  #add-service-form input{
+      position: relative;
+      width: 100%;
+      height: 50px;
+      border-bottom: 2px solid #162938;
+     
+  }
+  
+  #add-service-form #add-service-btn{
+      background-color: lightcoral;
+      color: white;
+  }
+  
+  #add-service-form #login-url{
+      color: lightcoral;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MANAGE SERVICE TABLE STYLE */
+
+
+.text-center {
+    text-align: center !important;
+    margin-top: 100px;
+}
+
+
+#manage-service {
+    margin-top: 150px;
+    text-align: center;
+  
+}
+
+
+.table {
+    width: auto;
+    margin: 50px auto;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(33, 23, 23, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    margin-top: 50px;
+    
+}
+
+.table thead th {
+    background-color: lightcoral;
+    color: white;
+    border: 1px solid #ddd;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table tbody td, .table tbody th {
+    padding: 15px;
+    text-align: center;
+    border: none;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.table .btn {
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.table .btn-primary {
+    background-color: lightcoral;
+    color: white;
+}
+
+.table .btn-danger {
+    background-color: darkred;
+    color: white;
+}
+
+.table .btn-primary:hover, .table .btn-danger:hover {
+    opacity: 0.8;
+}
+
+.table-container {
+    float: right;
+    width: calc(100% - 250px); /* Adjust width to leave space for the sidebar */
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#update-status-form{
+    width: 40%;
+    margin: 0 auto; 
+    margin-bottom: 5px;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid darkgreen;
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+#update-status-form .form-group {
+    margin-bottom: 15px; /* Add margin bottom between form groups */
+}
+
+#update-status-form  label {
+    margin-bottom: 5px; /* Add margin bottom between label and input */
+}
+
+#update-status-form input{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+   
+}
+
+#update-status-form #register-btn{
+    background-color: lightcoral;
+    color: white;
+}
+
+#update-status-form #login-url{
+    color: lightcoral;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* THANK YOU PAGE style */
+
+#thank-you {
+    background-image: url('../imgs/register-page-background.jpg');
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+#thank-you-card {
+    
+    margin-top: 10%;
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0,0,0,.5);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#thank-you-card p {
+    margin-bottom: 20px;
+    color: black;
+}
+
+#thank-you-card p span {
+    font-weight: bold;
+    color: lightcoral;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
